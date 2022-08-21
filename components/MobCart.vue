@@ -24,12 +24,14 @@
         </button>
       </div>
       <div class="flex justify-between items-start">
-        <p class="text-[13px] text-[#8C8C8C] leading-[13px]">
-          {{ cart.subtotal }}
-        </p>
-        <p class="text-[15px] text-[#595959] leading-[15px]">
-          {{ cart.total }}
-        </p>
+        <p
+          class="text-[13px] text-[#8C8C8C] leading-[13px]"
+          v-price:currency="cart.subtotal"
+        ></p>
+        <p
+          class="text-[15px] text-[#595959] leading-[15px]"
+          v-price:currency="cart.total"
+        ></p>
       </div>
     </div>
   </div>

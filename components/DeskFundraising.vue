@@ -49,8 +49,6 @@
         <p class="text-sm">已募資{{ fundPercent }}%</p>
       </div>
       <div class="w-[256px] h-[10px] relative mb-[10px]">
-        <!-- <img src="../images/percentBase.svg" />
-        <img class="relative top-[-11px]" src="../images/percent55.svg" /> -->
         <div class="w-full h-full bg-[#F0F0F0] rounded-[6px]"></div>
         <div
           class="absolute h-full bg-[#E34A4A] top-0 rounded-[7px]"
@@ -58,12 +56,26 @@
         ></div>
       </div>
       <div class="flex justify-start items-center h-[24px]">
-        <p class="mr-[4px] text-[22px] text-[#434343] leading-[22px]">
-          ${{ foundDetail.prices[0].price }}
-        </p>
-        <p class="text-[14px] text-[#BFBFBF] leading-[14px] line-through">
-          ${{ foundDetail.fixed_price }}
-        </p>
+        <span
+          class="
+            before:content-['$']
+            mr-[4px]
+            text-[22px] text-[#434343]
+            leading-[22px]
+          "
+          v-price:currency="foundDetail.prices[0].price"
+        >
+        </span>
+        <span
+          class="
+            before:content-['$']
+            text-[14px] text-[#BFBFBF]
+            leading-[14px]
+            line-through
+          "
+          v-price:currency="foundDetail.fixed_price"
+        >
+        </span>
       </div>
     </div>
   </div>

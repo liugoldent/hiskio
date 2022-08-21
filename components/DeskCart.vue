@@ -58,13 +58,13 @@
             <!-- 售價 -->
             <span
               class="w-1/3 flex-shrink-0 text-lg text-gray-600 text-[18px]"
-              >{{ cartDetail.subtotal }}</span
-            >
+              v-price:currency="cartDetail.subtotal"
+            ></span>
             <!-- 結帳金額 -->
             <span
               class="w-1/3 flex-shrink-0 break-all text-gray-700 text-[22px]"
-              >{{ cartDetail.total }}</span
-            >
+              v-price:currency="cartDetail.total"
+            ></span>
           </div>
           <!-- 垃圾桶 -->
           <button

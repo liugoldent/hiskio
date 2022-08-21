@@ -84,7 +84,10 @@
       "
     >
       <p class="text-[#8C8C8C] text-[16px] lg:pt-[21px]">金額</p>
-      <p class="text-[#595959] text-[14px] lg:pt-[17.12px]">${{ sumPrice }}</p>
+      <p
+        class="text-[#595959] text-[14px] lg:pt-[17.12px] before:content-['$']"
+        v-price:currency="sumPrice"
+      ></p>
     </div>
     <!-- 大金額顯示 -->
     <p
@@ -93,10 +96,10 @@
         mb-[20.92px]
         leading-[32px]
         h-[26.52px]
+        before:content-['$']
       "
-    >
-      ${{ sumPrice }}
-    </p>
+      v-price:currency="sumPrice"
+    ></p>
     <ButtonVue
       label="前往結帳"
       :btnClass="[

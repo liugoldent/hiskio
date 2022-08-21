@@ -2,12 +2,11 @@
   <div class="w-screen h-screen fixed z-10 flex justify-center items-center">
     <div
       class="
-        h-[722px]
+        h-[724px]
         login:h-full
         max-h-screen
         w-full
         max-w-[450px]
-        overflow-auto
       "
     >
       <!-- main content -->
@@ -18,7 +17,6 @@
           w-full
           rounded-xl
           bg-white
-          border-rounded
           flex flex-col
           justify-start
           items-center
@@ -29,11 +27,11 @@
         "
       >
         <div class="absolute top-0 left-0 z-10">
-          <img src="../images/login-left1.svg" />
+          <img src="../images/login-left1.svg" class="rounded-t-lg" />
           <img src="../images/login-left2.svg" class="relative top-[-125px]" />
         </div>
         <div class="absolute top-[280px] right-0 z-10">
-          <img src="../images/login-right1.svg" class="relative right-[-9px]"/>
+          <img src="../images/login-right1.svg" class="relative right-[-9px]" />
           <img
             src="../images/login-right2.svg"
             class="absolute bottom-[-9px]"
@@ -49,7 +47,6 @@
           <img src="../images/close.svg" />
         </button>
         <!-- 第二段登入or註冊切換鈕 -->
-        <!-- <div class="w-full overflow-hidden flex justify-center mb-[23px]"> -->
         <div class="flex justify-center mb-[23px]">
           <div class="flex flex-col items-center">
             <button
@@ -70,7 +67,6 @@
             註冊
           </button>
         </div>
-        <!-- </div> -->
         <!-- 第三段第三方註冊段 -->
         <div class="w-full h-full">
           <div class="h-full w-full flex flex-col justify-start items-center">
@@ -217,13 +213,9 @@
 
 <script>
 import ButtonVue from './Button.vue'
-import RotateRectVue from './RotateRect.vue'
-import RotateRect from './RotateRect.vue'
 export default {
   components: {
     ButtonVue,
-    RotateRectVue,
-    RotateRect,
   },
   data() {
     return {

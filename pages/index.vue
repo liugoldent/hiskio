@@ -254,7 +254,13 @@ export default {
      * @param {Object} fundDetail
      */
     async addCart(fundDetail) {
-      if (this.validateExtendOrNot(fundDetail) > -1) return
+      console.log(fundDetail)
+      // 如果有的話就刪除
+      if (this.validateExtendOrNot(fundDetail) > -1) {
+        this.trashItem(fundDetail)
+        return 
+      }
+      // 如果沒有的話正常新增
       const result = this.composeCartData([fundDetail])
       await this.crudCartData({ method: 'post', data: result })
     },
@@ -293,9 +299,9 @@ export default {
       hasStatus = this.cartArray.findIndex(
         (data) => data.id === fundDetail.id.toString()
       )
-      if (hasStatus > -1) {
-        alert('購物車已有此項目')
-      }
+      // if (hasStatus > -1) {
+      //   alert('購物車已有此項目')
+      // }
       return hasStatus
     },
     /**
@@ -348,6 +354,7 @@ export default {
     },
     /**
      * @description 刪掉購物車內的東西
+     * {*Object} item
      */
     async trashItem(item) {
       if (this.loginStatus) {
