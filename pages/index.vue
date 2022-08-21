@@ -1,7 +1,6 @@
 <template>
   <div class="flex flex-col bg-white w-full items-center h-auto">
     <!-- header -->
-
     <Header
       @menuOpenF="menuOpenF"
       @openLoginWindow="openLoginWindow"
@@ -254,11 +253,10 @@ export default {
      * @param {Object} fundDetail
      */
     async addCart(fundDetail) {
-      console.log(fundDetail)
       // 如果有的話就刪除
       if (this.validateExtendOrNot(fundDetail) > -1) {
         this.trashItem(fundDetail)
-        return 
+        return
       }
       // 如果沒有的話正常新增
       const result = this.composeCartData([fundDetail])
@@ -299,9 +297,6 @@ export default {
       hasStatus = this.cartArray.findIndex(
         (data) => data.id === fundDetail.id.toString()
       )
-      // if (hasStatus > -1) {
-      //   alert('購物車已有此項目')
-      // }
       return hasStatus
     },
     /**

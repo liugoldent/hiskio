@@ -87,7 +87,6 @@ export default {
       return percentNumber > 100 ? 'width: 100%' : `width: ${percentNumber}%`
     },
     fundPercent() {
-      console.log(this.foundDetail)
       const { consumers, fundraising_tickets } = this.foundDetail
       return Math.floor((consumers / fundraising_tickets) * 100)
     },

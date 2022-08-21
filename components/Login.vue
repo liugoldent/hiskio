@@ -221,8 +221,8 @@ export default {
     return {
       checked: true, // 是否勾選隱私權
       iconArray: [], // icon的陣列
-      acc: 'hiskiotest', // 使用者輸入的帳號
-      pwd: 'aabb820114', // 使用者輸入的密碼
+      acc: '', // 使用者輸入的帳號
+      pwd: '', // 使用者輸入的密碼
       pwdErrorMsg: '', //密碼錯誤訊息
       accErrorMsg: '', // 帳號錯誤訊息
     }
@@ -259,7 +259,6 @@ export default {
      * @description 登入hiskio
      */
     login() {
-      const self = this
       if (!this.checked) return
       const { baseUrl } = this.$store.state.globalPar
       this.$axios
